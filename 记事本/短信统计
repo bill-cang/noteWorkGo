@@ -1,0 +1,11 @@
+请求总数：
+grep "\[SendAfricaTalking:\] debug come in" * | wc -l
+发送成功：
+grep "\[sendShortMsg\] Africa's talking send success" * | wc -l
+发送失败：
+grep "\[sendShortMsg\] Send request Africa's Talking failed" *| wc -l
+grep "\[sendShortMsg\] read resultBody msg failed" * | wc -l
+
+使用短信登录总数：
+
+
