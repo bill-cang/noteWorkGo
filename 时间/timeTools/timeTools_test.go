@@ -2,7 +2,6 @@ package timeTools
 
 import (
 	"fmt"
-	"strings"
 	"testing"
 	"time"
 )
@@ -10,28 +9,24 @@ import (
 func TestGetAfterSomeDateOriginStamp(t *testing.T) {
 
 	now := time.Now().Unix()
-	formatStr := GetFormatDateFormLocation("", 1583251200)
-	fmt.Println("now = ", now, "formatStr = ", formatStr)
+
 	//1583251373
-	stamp, _ := GetDateStrToStamp("", "2020-03-04 00:02:53")
+	stamp, _ := GetDateStrToStamp("", "2020-03-28 10:44:00")
 	fmt.Println("stamp = ", stamp)
 
-	zeroStamp := GetAfterSomeDateZeroClockStamp("", 0)
-	fmt.Printf("zeroStamp =%d", zeroStamp)
-
-	str := "123456"
-	str = strings.Replace(str, "1", "", 1)
-	str = strings.Replace(str, "2", "", 1)
-	str = strings.Replace(str, "3", "", 1)
-	str = strings.Replace(str, "4", "", 1)
-	str = strings.Replace(str, "5", "", 1)
-	str = strings.Replace(str, "6", "", 1)
-
-	fmt.Println(str)
+	formatStr := GetFormatDateFormLocation("", stamp)
+	fmt.Println("now = ", now, "formatStr = ", formatStr)
 
 }
 
 func TestGetEqualDay(t *testing.T) {
-	eq := GetEqualDay(86400)
-	fmt.Printf("eq := %+v\n", eq)
+	formatDate := GetFormatDateFormLocation("Kenya", 1585542780)
+	fmt.Printf("formatDate :%s\n",formatDate)
+
+	//time.Unix(1585224483,0).Format("01/02/2006 15:04:05")
+	simpleTimeFormat := time.Unix(1585224483,0).In(GetTimeLocation("Kenya")).Format("01/02/2006")
+	fmt.Printf("simpleTimeFormat =%s\n",simpleTimeFormat)
 }
+
+
+

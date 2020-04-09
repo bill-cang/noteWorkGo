@@ -7,12 +7,12 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"noteWork/utils"
 	"os"
 	"regexp"
 	"strconv"
 	"strings"
 	"time"
-	"utils"
 )
 
 var (
@@ -20,6 +20,7 @@ var (
 	fileAdd string
 	chqu    = make(chan string, 1)
 )
+
 //★★★核心：从老师管道读取各位老师地址，并按老师id发起二次请求,获取老师个人信息放入老师管道，获取老师作品放入作品管道
 func getPageDataToChan() {
 	var url string
@@ -65,8 +66,8 @@ func getPageDataToChan() {
 			//开辟一条协程去单独整理老师个人信息
 			go getArtistMsg(ls_nameSpl, ls_massSpl)
 
-			ln:= len(ls_conpaSpl)
-			if ln < 1{
+			ln := len(ls_conpaSpl)
+			if ln < 1 {
 				return
 			}
 
@@ -95,7 +96,7 @@ func getPageDataToChan() {
 			}
 		}(lsStr)
 	}
-	time.Sleep(30*time.Second)
+	time.Sleep(30 * time.Second)
 	chExit <- StarPage
 }
 
@@ -174,7 +175,7 @@ func aToI(str string) int {
 	i, e := strconv.Atoi(str)
 	if e != nil {
 		fmt.Println(str)
-		utils.HandleError(e,"strconv.Atoi(str)")
+		utils.HandleError(e, "strconv.Atoi(str)")
 		return 0
 	}
 	return i

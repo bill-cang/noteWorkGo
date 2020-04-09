@@ -3,22 +3,26 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	m_struct "noteWork/基础类型/结构体"
 	"reflect"
 	"strings"
 	"sync"
 )
 
 func main() {
-	tmp := [11]int{}
-	v := 0
-	for i := 8; i <= 108; i++ {
-		tmp[v] = i
-		if v%10 == 0 && v != 0 {
-			fmt.Printf("v =%+v\n", tmp)
-			v = 0
-		}
-		v++
+	xiaoHei := &m_struct.Dog{
+		Animal: m_struct.Animal{
+			Name: "xiaoHei",
+			Age:  3,
+		},
+		Trait: "love",
 	}
+
+	ain := &m_struct.Animal{
+		Name: "",
+		Age:  0,
+	}
+
 }
 
 /*====================实参、形参：*/

@@ -1,0 +1,93 @@
+syntax = "proto3";
+
+package shuga.protobuf;
+
+//import "packet.proto";
+
+option go_package = "typ";
+
+/*=====================参与*/
+message ActNewUserEncourageJoinReq {
+    string uid = 1; //用户uid
+    string device_id = 2; //设备id
+}
+
+message ActNewUserEncourageJoinRsp {
+    RspHead head = 1;
+    int32 join_status = 2; //0:失败，1：成功，2：该设备已参与,3:以兑换
+    bool open = 3; // 窗口是否显示
+}
+/*=====================抽奖页*/
+message ActNewUserEncourageLuckReq {
+    string uid = 1; //用户uid
+}
+
+message ActNewUserEncourageLuckRsp {
+    RspHead head = 1;
+    turntable ttl = 2; //中奖奖品
+    repeated taskSpeed taskSpeeds = 3; //任务列表：0：连续5天登录；1：获得10个点赞；2：获得8名互赞好友；3：去聊天室聊天；4：完成5次语音匹配；5：发三天Story
+    bool isLucked = 4; //是否抽过奖
+    repeated ActNewUExchanged exchanged = 5; //最近中奖前十
+    bool task_over = 6; //所有任务是否完成
+}
+
+//以兑换数据（广播内容）
+message ActNewUExchanged {
+    string user_name = 1;
+    int32 Prize = 2;
+}
+
+//转盘
+enum turntable {
+    PRI_0 = 0;
+    PRI_20 = 20;
+    PRI_50 = 50;
+    PRI_100 = 100;
+    PRI_200 = 200;
+    PRI_500 = 500;
+    PRI_1000 = 1000;
+}
+
+message taskSpeed {
+    int32 finished = 1; //已完成任务量
+    int32 total = 2; //总任务量
+    string content = 3; //文案内容
+    int32 task_action = 4; //
+}
+
+/*=====================保存抽奖状态*/
+message ActNewUserEncourageLuckDrawReq {
+    string uid = 1; //用户uid
+    string device_id = 2; //设备id
+    turntable ttl = 3; //中将奖品
+}
+
+message ActNewUserEncourageLuckDrawRsp {
+    RspHead head = 1;
+    bool record = 2; //记录是否成功
+}
+
+/*=====================刮刮卡兑换*/
+message ActNewUserEncouragePrizeReq {
+    string uid = 1; //用户uid
+    string device_id = 2; //设备id
+    int32 prize_id = 3; //兑换奖品id
+}
+
+message ActNewUserEncouragePrizeRsp {
+    RspHead head = 1;
+    string card_num = 2; //奖品卡号
+    int32 status_code = 3; //奖品获得状态：0：失败；1：成功；2:奖品数量不足;3:当日抽奖额度已用完。
+}
+
+//任务结构体
+message NEW_U_TASK_LIST {
+    string T_LOGIN = 1; //连续登录任务
+    string T_THUMB = 2; //获取点赞任务
+    string T_FRIEND = 3; //获得好友任务
+    string T_CHAT = 4; //聊天室聊天任务
+    string T_MATCH = 5; //语音匹配任务
+    string T_STORY = 6; //
+}
+
+

@@ -8,15 +8,15 @@ import (
 )
 
 const (
-	maxWorkLen  = 200 //堆积go 数量
-	minWorkLen  = 20  //最小go 数量
-	growStepLen = 20  //每次增加GO 数量
+	maxWorkConn  = 200 //堆积go 数量
+	minWorkConn  = 20  //最小go 数量
+	growStepConn = 20  //每次增加GO 数量
 
 	chanQueueLen = 10000 //？？
 )
 
 func init() {
-	initWorkers(minWorkLen)
+	initWorkers(minWorkConn)
 }
 
 //work 处理队列
@@ -37,8 +37,8 @@ var wp *workPool
 
 func initWorkers(workerNum int) {
 
-	if workerNum < minWorkLen || workerNum > maxWorkLen {
-		workerNum = minWorkLen
+	if workerNum < minWorkConn || workerNum > maxWorkConn {
+		workerNum = minWorkConn
 	}
 	wp = &workPool{
 		closed: false,
@@ -80,7 +80,7 @@ func (wp *workPool) startWorker() {
 		case <-t.C: //缩容
 			t.Reset(30 * time.Second)
 			if time.Now().Unix()-now > 5*60 { //5分钟空闲
-				if atomic.LoadInt32(&wp.size) > minWorkLen {
+				if atomic.LoadInt32(&wp.size) > minWorkConn {
 					//xlog.LevelLogfn(xlog.WARN, "scale work pool idle....work size=%d", wp.size)
 					fmt.Printf("scale work pool idle....work size=%d", wp.size)
 					return
@@ -120,13 +120,13 @@ func SendQueue(entity ParamFunc) bool {
 		return false
 	}
 	//堆积到maxWorkLen的倍数,开始扩容GO 数量
-	if wp.size < minWorkLen || (wp.size <= maxWorkLen-growStepLen && int32(len(wp.works)-maxWorkLen)/maxWorkLen > (wp.size-minWorkLen)/growStepLen) {
-		for i := 0; i < growStepLen; i++ {
+	if wp.size < minWorkConn || (wp.size <= maxWorkConn-growStepConn && int32(len(wp.works)-maxWorkConn)/maxWorkConn > (wp.size-minWorkConn)/growStepConn) {
+		for i := 0; i < growStepConn; i++ {
 			go wp.startWorker()
 		}
 		time.Sleep(50 * time.Millisecond)
-		//xlog.LevelLogfn(xlog.INFO, "SendQueue work pool growStepLen....work size=%d,len=%d", wp.size, len(wp.works))
-		fmt.Printf("SendQueue work pool growStepLen....work size=%d,len=%d\n", wp.size, len(wp.works))
+		//xlog.LevelLogfn(xlog.INFO, "SendQueue work pool growStepConn....work size=%d,len=%d", wp.size, len(wp.works))
+		fmt.Printf("SendQueue work pool growStepConn....work size=%d,len=%d\n", wp.size, len(wp.works))
 	}
 	select {
 	case wp.works <- entity:

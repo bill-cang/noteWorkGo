@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/jmoiron/sqlx"
-	"utils"
+	"noteWork/utils"
 )
 
 //建立数据库链接
