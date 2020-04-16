@@ -20,7 +20,7 @@ func TestGetAfterSomeDateOriginStamp(t *testing.T) {
 }
 
 func TestGetEqualDay(t *testing.T) {
-	formatDate := GetFormatDateFormLocation("Kenya", 1585542780)
+	formatDate := GetFormatDateFormLocation("Kenya", 1586489551)
 	fmt.Printf("formatDate :%s\n",formatDate)
 
 	//time.Unix(1585224483,0).Format("01/02/2006 15:04:05")
