@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/go-opencv/go-opencv/opencv"
+	//"github.com/go-opencv/go-opencv/opencv"
 	"os"
 	"path"
 	"runtime"
