@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	m_struct "noteWork/基础类型/结构体"
+	m_struct "noteWork/keyword/struct"
 	"reflect"
 	"strings"
 	"sync"
