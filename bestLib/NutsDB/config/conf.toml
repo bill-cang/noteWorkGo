@@ -1,0 +1,7 @@
+title = "Config Menu"
+
+#2020-06-04 10:42:24
+[database]
+file_path = "bestLib/NutsDB/dbfile"
+
+
