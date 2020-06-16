@@ -1,42 +1,36 @@
 package main
 
 import (
-	"flag"
-	"log"
-	"net"
-	"net/http"
-	"os"
-	"os/exec"
+	"fmt"
+	"runtime"
+	"time"
 )
+
+func init() {
+	runtime.GOMAXPROCS(runtime.NumCPU())
+}
 
 func main() {
 
-	file := netListener.File() // this returns a Dup()
-	path := "/path/to/executable"
-	args := []string{"-graceful"}
-	cmd := exec.Command(path, args...)
-	cmd.Stdout = os.Stdout
-	cmd.Stderr = os.Stderr
-	cmd.ExtraFiles = []*os.File{file}
-	err := cmd.Start()
-	if err != nil {
-		log.Fatalf("gracefulRestart: Failed to launch, error: %v", err)
+	ch := make(chan int, 1024)
+	go func(ch chan int) {
+		for {
+			val := <-ch
+			fmt.Printf("val:%d\n", val)
+		}
+	}(ch)
+
+	tick := time.NewTicker(1 * time.Second)
+	for i := 0; i < 20; i++ {
+		select {
+		case ch <- i:
+		case <-tick.C:
+			fmt.Printf("%d: case <-tick.C\n", i)
+		}
+
+		time.Sleep(200 * time.Millisecond)
 	}
-
-	server := &http.Server{Addr: "0.0.0.0:8888"}
-	var gracefulChild bool
-	var l net.Listener
-	var err error
-	flag.BoolVar(&gracefulChild, "graceful", false, "listen on fd open 3 (internal use only)")
-	if gracefulChild {
-		log.Print("main: Listening to existing file descriptor 3.")
-		f := os.NewFile(3, "")
-		l, err = net.FileListener(f)
-	} else {
-		log.Print("main: Listening on a new file descriptor.")
-		l, err = net.Listen("tcp", server.Addr)
-	}
-
-
+	close(ch)
+	tick.Stop()
 
 }
