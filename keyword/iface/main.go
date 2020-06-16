@@ -12,6 +12,7 @@ func init() {
 
 func main() {
 
+	//12
 	ch := make(chan int, 1024)
 	go func(ch chan int) {
 		for {
