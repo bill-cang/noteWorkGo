@@ -2,8 +2,8 @@ package direc
 
 import (
 	"fmt"
-	"noteWork/encryption"
-	"noteWork/utils"
+	"noteWork/bestLib/utils"
+	"noteWork/bestLib/utils/encryption"
 	"testing"
 	"time"
 )

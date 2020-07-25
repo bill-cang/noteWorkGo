@@ -17,7 +17,7 @@ func sendEmail(subject string, tos ...string) error {
 	e.To = tos
 	e.Subject = subject
 	e.HTML = []byte("<h1>HTML 正文</h1>")
-	e.AttachFile("E:/tmp/mzx.jpg")
+	e.AttachFile("E:/tmp/mzx.png")
 	auth := smtp.PlainAuth("", smtpUsername, "private8539byC*", "smtp.qq.com")
 	err := e.Send("smtp.qq.com:25", auth)
 	if err != nil {
