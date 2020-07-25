@@ -10,7 +10,7 @@ import (
 
 func main() {
 	_, currentfile, _, _ := runtime.Caller(0)
-	filename := path.Join(path.Dir(currentfile), "E:/Tmp/mzx.jpg")
+	filename := path.Join(path.Dir(currentfile), "E:/Tmp/mzx.png")
 	if len(os.Args) == 2 {
 		filename = os.Args[1]
 	}

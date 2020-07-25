@@ -16,3 +16,6 @@ RestTime int
 	`)
 	fmt.Println(rs, len("QWERTYUIOPASDFGHJKLZXCVBNM1234567890"))
 }
+
+
+

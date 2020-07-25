@@ -3,27 +3,48 @@ package encryption
 import (
 	"crypto/md5"
 	"encoding/hex"
+	"encoding/json"
 	"errors"
+	"fmt"
 	"io"
-	"noteWork/utils/zerocopy"
+	"log"
+	"noteWork/bestLib/utils/conversionType"
+	"noteWork/bestLib/utils/zerocopy"
 	"os"
+	"reflect"
 	"strings"
 )
 
 func Md5SumStr(iData interface{}) (digest string, err error) {
-	var data []byte
-	switch vv := iData.(type) {
-	case string:
-		data = zerocopy.StrToBytes(vv)
-	case []byte:
-		data = vv
+	var data *[]byte
+	kind := reflect.TypeOf(iData).Kind()
+	switch kind {
+	case reflect.String:
+		tmp := zerocopy.StrToBytes(iData.(string))
+		data = &tmp
+	case reflect.Struct:
+		/*		if data, err = conversionType.StructConversionByte(iData); err != nil {
+				return
+			}*/
+		if tmp, err := json.Marshal(iData); err != nil {
+			log.Printf("[Md5SumStr] json.Marshal iData =%+v", iData)
+			return "" ,err
+		} else {
+			data = &tmp
+		}
+
+		fmt.Printf("[Md5SumStr] data = %+v", data)
 	default:
 		err = errors.New("Unknown iData type")
 		return
 	}
-	h := md5.Sum(data)
+	h := md5.Sum(*data)
 	digest = hex.EncodeToString(h[:])
 	return
+}
+
+func hEncode(bs *[16]byte) string {
+	return hex.EncodeToString(bs[:])
 }
 
 func Md5SumRaw(iData interface{}) (digest []byte, err error) {
@@ -33,6 +54,10 @@ func Md5SumRaw(iData interface{}) (digest []byte, err error) {
 		data = zerocopy.StrToBytes(vv)
 	case []byte:
 		data = vv
+	case struct{}:
+		if data, err = conversionType.StructConversionByte(iData); err != nil {
+			return
+		}
 	default:
 		err = errors.New("buxiaode")
 		return

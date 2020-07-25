@@ -1,37 +1,33 @@
 package main
 
 import (
+	"context"
 	"fmt"
-	"runtime"
 	"time"
 )
 
-func init() {
-	runtime.GOMAXPROCS(runtime.NumCPU())
+func main() {
+	ctx, cancel := context.WithCancel(context.Background())
+
+	go worker(ctx, "node01")
+	go worker(ctx, "node02")
+	go worker(ctx, "node03")
+
+	time.Sleep(5 * time.Second)
+	fmt.Println("stop the gorutine")
+	cancel()
+	time.Sleep(5 * time.Second)
 }
 
-func main() {
-
-	//12
-	ch := make(chan int, 1024)
-	go func(ch chan int) {
-		for {
-			val := <-ch
-			fmt.Printf("val:%d\n", val)
-		}
-	}(ch)
-
-	tick := time.NewTicker(1 * time.Second)
-	for i := 0; i < 20; i++ {
+func worker(ctx context.Context, name string) {
+	for {
 		select {
-		case ch <- i:
-		case <-tick.C:
-			fmt.Printf("%d: case <-tick.C\n", i)
+		case <-ctx.Done():
+			fmt.Println(name, "got the stop channel")
+			return
+		default:
+			fmt.Println(name, "still working")
+			time.Sleep(1 * time.Second)
 		}
-
-		time.Sleep(200 * time.Millisecond)
 	}
-	close(ch)
-	tick.Stop()
-
 }

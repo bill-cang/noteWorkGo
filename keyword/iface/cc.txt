@@ -1,0 +1,122 @@
+mysql> select * from t_act_answer_question;
+|  11 | KE_20200702130000 | How many digits are there in the Hindu-Arabic System?                                             | 0           |      1 |           0 |         0 |       0 |           0 |
+|  12 | KE_20200702130000 | Among the following which natural number has no predecessor?                                      | 3           |      2 |           0 |         0 |       0 |           0 |
+|  13 | KE_20200702130000 | In Roman numerals M represents 1000, what does M represent?                                       | 3           |      3 |           0 |         0 |       0 |           0 |
+|  14 | KE_20200702130000 | The water body to the West of Africa is known as?                                                 | 0           |      4 |           0 |         0 |       0 |           0 |
+|  15 | KE_20200702130000 | Which one of the following countries does the Equator pass through?                               | 1           |      5 |           0 |         0 |       0 |           0 |
+|  16 | KE_20200702130000 | Which of the following is the smallest country in Eastern Africa?                                 | 2           |      6 |           0 |         0 |       0 |           0 |
+|  17 | KE_20200702130000 | The smallest bone in the human body is about the size of？                                        | 3           |      7 |           0 |         0 |       0 |           0 |
+|  18 | KE_20200702130000 | The smallest bones in the human body are found in the？                                           | 1           |      8 |           0 |         0 |       0 |           0 |
+|  19 | KE_20200702130000 | Calcium crystals are a normal part of what body region?                                           | 1           |      9 |           0 |         0 |       0 |           0 |
+|  20 | KE_20200702130000 | What is the largest organ of the human body?                                                      | 1           |     10 |           0 |         0 |       0 |           0 |
+|  21 | KE_20200703130000 | Which is the main mineral mined in lake Magadi?                                                   | 1           |      1 |           0 |         0 |       0 |           0 |
+|  22 | KE_20200703130000 | Which of the following is the method used in mining of Fluorspar？                                | 0           |      2 |           0 |         0 |       0 |           0 |
+|  23 | KE_20200703130000 | Generally, there are considered to be how many internal organs?                                   | 2           |      3 |           0 |         0 |       0 |           0 |
+|  24 | KE_20200703130000 | On average a male human heart weight about                                                        | 1           |      4 |           0 |         0 |       0 |           0 |
+|  25 | KE_20200703130000 | What organ is sometimes referred to as the gullet?                                                | 2           |      5 |           0 |         0 |       0 |           0 |
+|  26 | KE_20200703130000 | What is the animal classification?                                                                | 2           |      6 |           0 |         0 |       0 |           0 |
+|  27 | KE_20200703130000 | Which animal is an invertebrate?                                                                  | 1           |      7 |           0 |         0 |       0 |           0 |
+|  28 | KE_20200703130000 | What are some common symptoms of coronavirus?                                                     | 1           |      8 |           0 |         0 |       0 |           0 |
+|  29 | KE_20200703130000 | Who was the supreme governing school of elders of the Ameru people？                              | 2           |      9 |           0 |         0 |       0 |           0 |
+|  30 | KE_20200703130000 | A Kenyan independence activist and one of the founding fathers of Kenya?                          | 2           |     10 |           0 |         0 |       0 |           0 |
+|  31 | KE_20200703200000 | Which of the following is not a disadvantage of open cast mining.                                 | 0           |      1 |           0 |         0 |       0 |           0 |
+|  32 | KE_20200703200000 | How do humans benefit from mining?                                                                | 1           |      2 |           0 |         0 |       0 |           0 |
+|  33 | KE_20200703200000 | Which mineral is also mined on land and in the sea.                                               | 0           |      3 |           0 |         0 |       0 |           0 |
+|  34 | KE_20200703200000 | Which of the following is the leading export mineral of Kenya?                                    | 2           |      4 |           0 |         0 |       0 |           0 |
+|  35 | KE_20200703200000 | What was man's first invention?                                                                   | 2           |      5 |           0 |         0 |       0 |           0 |
+|  36 | KE_20200703200000 | What material did the man use to make the first pair of shoes?                                    | 0           |      6 |           0 |         0 |       0 |           0 |
+|  37 | KE_20200703200000 | How was the first fire made?                                                                      | 0           |      7 |           0 |         0 |       0 |           0 |
+|  38 | KE_20200703200000 | Which province has the most historical sites in Kenya？                                           | 2           |      8 |           0 |         0 |       0 |           0 |
+|  39 | KE_20200703200000 | Which province has the most historical sites in Kenya？                                           | 2           |      9 |           0 |         0 |       0 |           0 |
+|  40 | KE_20200703200000 | Where is Old Town located?                                                                        | 2           |     10 |           0 |         0 |       0 |           0 |
+|  41 | KE_20200704130000 | Whose theory of the process of natural selection began the study of man's evolution?              | 2           |      1 |           0 |         0 |       0 |           0 |
+|  42 | KE_20200704130000 | The Olduvai Gorge in Africa is considered to be the Grand Canyon of Evolution of:                 | 1           |      2 |           0 |         0 |       0 |           0 |
+|  43 | KE_20200704130000 | Which discovery was made first?                                                                   | 1           |      3 |           0 |         0 |       0 |           0 |
+|  44 | KE_20200704130000 | Which is the biggest forest in Kenya?                                                             | 2           |      4 |           0 |         0 |       0 |           0 |
+|  45 | KE_20200704130000 | Which natural resource does Kenya not mine?                                                       | 1           |      5 |           0 |         0 |       0 |           0 |
+|  46 | KE_20200704130000 | Who is the minister of natural resources in Kenya?                                                | 1           |      6 |           0 |         0 |       0 |           0 |
+|  47 | KE_20200704130000 | Which is the largest water body in Kenya?                                                         | 1           |      7 |           0 |         0 |       0 |           0 |
+|  48 | KE_20200704130000 | Who among the following African leaders did not retire from office voluntarily?                   | 1           |      8 |           0 |         0 |       0 |           0 |
+|  49 | KE_20200704130000 | Haile Selassie died in the year?                                                                  | 3           |      9 |           0 |         0 |       0 |           0 |
+|  50 | KE_20200704200000 | Which of the following is a prime number?                                                         | 1           |     10 |           0 |         0 |       0 |           0 |
+|  51 | KE_20200705130000 | When did Kenya gain independence?                                                                 | 3           |      1 |           0 |         0 |       0 |           0 |
+|  52 | KE_20200705130000 | Which country was the first to gain independence?                                                 | 2           |      2 |           0 |         0 |       0 |           0 |
+|  53 | KE_20200705130000 | Which one of the following did Not colonize Africa?                                               | 3           |      3 |           0 |         0 |       0 |           0 |
+|  54 | KE_20200705130000 | Which of these countries is not a British colony?                                                 | 3           |      4 |           0 |         0 |       0 |           0 |
+|  55 | KE_20200705130000 | What is the world's longest river called?                                                         | 0           |      5 |           0 |         0 |       0 |           0 |
+|  56 | KE_20200705130000 | Which planet is closest to Earth?                                                                 | 1           |      6 |           0 |         0 |       0 |           0 |
+|  57 | KE_20200705130000 | Which of the following is NOT a way to prevent body odor?                                         | 0           |      7 |           0 |         0 |       0 |           0 |
+|  58 | KE_20200705130000 | How often should you get dental check-ups                                                         | 3           |      8 |           0 |         0 |       0 |           0 |
+|  59 | KE_20200705130000 | Which of these African leaders spearheaded the formation of the OAU                               | 0           |      9 |           0 |         0 |       0 |           0 |
+|  60 | KE_20200705130000 | How many years did Nelson Mandela spend in prison?                                                | 2           |     10 |           0 |         0 |       0 |           0 |
+|  61 | KE_20200705200000 | Which one of the following countries was not colonized?                                           | 3           |      1 |           0 |         0 |       0 |           0 |
+|  62 | KE_20200705200000 | The landlocked country in Africa was formerly known as Nyasaland?                                 | 2           |      2 |           0 |         0 |       0 |           0 |
+|  63 | KE_20200705200000 | Which was the name for Tanzania mainland until 1964?                                              | 1           |      3 |           0 |         0 |       0 |           0 |
+|  64 | KE_20200705200000 | What percentage of the human body is water?                                                       | 1           |      4 |           0 |         0 |       0 |           0 |
+|  65 | KE_20200705200000 | We see objects using our?                                                                         | 3           |      5 |           0 |         0 |       0 |           0 |
+|  66 | KE_20200705200000 | We taste food using which of the following?                                                       | 0           |      6 |           0 |         0 |       0 |           0 |
+|  67 | KE_20200705200000 | He established himself as a militant and fiery nationalist to serve the poor and landless people. | 3           |      7 |           0 |         0 |       0 |           0 |
+|  68 | KE_20200705200000 | Who was the first vice president of Kenya                                                         | 1           |      8 |           0 |         0 |       0 |           0 |
+|  69 | KE_20200705200000 | Which is the capital city of Tanzania?                                                            | 2           |      9 |           0 |         0 |       0 |           0 |
+|  70 | KE_20200705200000 | Which of these countries is landlocked?                                                           | 2           |     10 |           0 |         0 |       0 |           0 |
+|  71 | KE_20200706130000 | Which of the following animals is not part of the big five                                        | 3           |      1 |           0 |         0 |       0 |           0 |
+|  72 | KE_20200706130000 | Which of these animals is rarely a pet                                                            | 2           |      2 |           0 |         0 |       0 |           0 |
+|  73 | KE_20200706130000 | Which of these animals has 3 hearts?                                                              | 0           |      3 |           0 |         0 |       0 |           0 |
+|  74 | KE_20200706130000 | In Kenya, the first COVID-19 partient returned to Kenya from which country?                       | 0           |      4 |           0 |         0 |       0 |           0 |
+|  75 | KE_20200706130000 | Which of these is not an internal organ?                                                          | 2           |      5 |           0 |         0 |       0 |           0 |
+|  76 | KE_20200706130000 | The smallest part that constitutes to form a human body is called?                                | 1           |      6 |           0 |         0 |       0 |           0 |
+|  77 | KE_20200706130000 | Which one of the following is not a classification of animals?                                    | 3           |      7 |           0 |         0 |       0 |           0 |
+|  78 | KE_20200706130000 | Which one of the following is an amphibian?                                                       | 1           |      8 |           0 |         0 |       0 |           0 |
+|  79 | KE_20200706130000 | Name one mammal that lays eggs.                                                                   | 1           |      9 |           0 |         0 |       0 |           0 |
+|  80 | KE_20200706130000 | Which of the following animals does not give us meat?                                             | 2           |     10 |           0 |         0 |       0 |           0 |
+|  81 | KE_20200706200000 | Which of these is NOT an element of the physical environment?                                     | 2           |      1 |           0 |         0 |       0 |           0 |
+|  82 | KE_20200706200000 | Approximately 70% of all freshwater withdrawn for human use is used for                           | 1           |      2 |           0 |         0 |       0 |           0 |
+|  83 | KE_20200706200000 | Which action has the greatest impact on reducing the threat of global warming?                    | 3           |      3 |           0 |         0 |       0 |           0 |
+|  84 | KE_20200706200000 | The best female rapper in the USA                                                                 | 1           |      4 |           0 |         0 |       0 |           0 |
+|  85 | KE_20200706200000 | Which actress gave birth to a baby girl named Coco in 2004?                                       | 1           |      5 |           0 |         0 |       0 |           0 |
+|  86 | KE_20200706200000 | Which Alicia has had hit singles including 'Most Girls' and 'Just Like A Pill'?                   | 2           |      6 |           0 |         0 |       0 |           0 |
+|  87 | KE_20200706200000 | Which of this minerals is mostly found in Kenya                                                   | 0           |      7 |           0 |         0 |       0 |           0 |
+|  88 | KE_20200706200000 | Which groups of countries in Africa borders the Mediterranean Sea?                                | 0           |      8 |           0 |         0 |       0 |           0 |
+|  89 | KE_20200706200000 | Entomology is the science that studies?                                                           | 1           |      9 |           0 |         0 |       0 |           0 |
+|  90 | KE_20200706200000 | Who is Justin Bieber married to?                                                                  | 1           |     10 |           0 |         0 |       0 |           0 |
+|  91 | KE_20200707130000 | In which year did Dedan Kimathi die?                                                              | 2           |      1 |           0 |         0 |       0 |           0 |
+|  92 | KE_20200707130000 | Who among the following was not part of the Kapenguria six?                                       | 3           |      2 |           0 |         0 |       0 |           0 |
+|  93 | KE_20200707130000 | Who was the longest-serving vice president?                                                       | 2           |      3 |           0 |         0 |       0 |           0 |
+|  94 | KE_20200707130000 | How old is Fort Jesus?                                                                            | 3           |      4 |           0 |         0 |       0 |           0 |
+|  95 | KE_20200707130000 | Where are the crying stones located?                                                              | 1           |      5 |           0 |         0 |       0 |           0 |
+|  96 | KE_20200707130000 | Which of the following historic site is not found in Rift valley?                                 | 1           |      6 |           0 |         0 |       0 |           0 |
+|  97 | KE_20200707130000 | Which archeological site is found within the Arabuko Sokoke forest?                               | 0           |      7 |           0 |         0 |       0 |           0 |
+|  98 | KE_20200707130000 | Who discovered fossilized footprints of hominids at a place called Laetoli?                       | 2           |      8 |           0 |         0 |       0 |           0 |
+|  99 | KE_20200707130000 | Which was the last stage of evolution                                                             | 3           |      9 |           0 |         0 |       0 |           0 |
+| 100 | KE_20200707130000 | Which was the first animal that man domesticated for food?                                        | 2           |     10 |           0 |         0 |       0 |           0 |
+| 101 | KE_20200707200000 | When did agriculture begin?                                                                       | 3           |      1 |           0 |         0 |       0 |           0 |
+| 102 | KE_20200707200000 | How old is the earliest cave painting?                                                            | 3           |      2 |           0 |         0 |       0 |           0 |
+| 103 | KE_20200707200000 | Which of the following was among the first invention of Eary man?                                 | 0           |      3 |           0 |         0 |       0 |           0 |
+| 104 | KE_20200707200000 | Which one of these natural resources has Kenya had a shortage of?                                 | 1           |      4 |           0 |         0 |       0 |           0 |
+| 105 | KE_20200707200000 | Mount Kenya is Kenya's highest mountain which is considered?                                      | 1           |      5 |           0 |         0 |       0 |           0 |
+| 106 | KE_20200707200000 | What is lake Nakuru National Park famous for?                                                     | 2           |      6 |           0 |         0 |       0 |           0 |
+| 107 | KE_20200707200000 | Moi was the leader of which party?                                                                | 0           |      7 |           0 |         0 |       0 |           0 |
+| 108 | KE_20200707200000 | How many members does the National Assembly of Kenya consist of?                                  | 0           |      8 |           0 |         0 |       0 |           0 |
+| 109 | KE_20200707200000 | The Gold Coast, a British colony on the Gulf of Guinea is currently known as?                     | 2           |      9 |           0 |         0 |       0 |           0 |
+| 110 | KE_20200707200000 | The landlocked country in Africa was formerly known as Nyasaland?                                 | 2           |     10 |           0 |         0 |       0 |           0 |
+| 111 | KE_20200708130000 | What is the easiest way to prevent catching flu?                                                  | 3           |      1 |           0 |         0 |       0 |           0 |
+| 112 | KE_20200708130000 | What is the benefit of practicing good hygiene?                                                   | 1           |      2 |           0 |         0 |       0 |           0 |
+| 113 | KE_20200708130000 | Which among the following is a personal hygiene item?                                             | 1           |      3 |           0 |         0 |       0 |           0 |
+| 114 | KE_20200708130000 | Who is the governor of Nairobi?                                                                   | 0           |      4 |           0 |         0 |       0 |           0 |
+| 115 | KE_20200708130000 | Who is the richest man in Africa?                                                                 | 3           |      5 |           0 |         0 |       0 |           0 |
+| 116 | KE_20200708130000 | What does KBC mean?                                                                               | 0           |      6 |           0 |         0 |       0 |           0 |
+| 117 | KE_20200708130000 | When was the first case of Covid 19 reported?                                                     | 3           |      7 |           0 |         0 |       0 |           0 |
+| 118 | KE_20200708130000 | Which of the following is not a problem associated with mining?                                   | 1           |      8 |           0 |         0 |       0 |           0 |
+| 119 | KE_20200708130000 | Lake Magadi is well known for?                                                                    | 0           |      9 |           0 |         0 |       0 |           0 |
+| 120 | KE_20200708130000 | Limestone is the raw material used for the manufacture of?                                        | 2           |     10 |           0 |         0 |       0 |           0 |
+| 121 | KE_20200708200000 | How many holes does an ear have?                                                                  | 0           |      1 |           0 |         0 |       0 |           0 |
+| 122 | KE_20200708200000 | The bones that make up your spine are known as?                                                   | 1           |      2 |           0 |         0 |       0 |           0 |
+| 123 | KE_20200708200000 | The two holes in the nose are called?                                                             | 0           |      3 |           0 |         0 |       0 |           0 |
+| 124 | KE_20200708200000 | Who built fort Jesus?                                                                             | 1           |      4 |           0 |         0 |       0 |           0 |
+| 125 | KE_20200708200000 | Which of the following prehistoric sites is not found in Kenya?                                   | 3           |      5 |           0 |         0 |       0 |           0 |
+| 126 | KE_20200708200000 | In which year was Hyrax hill site proclaimed a national monument?                                 | 0           |      6 |           0 |         0 |       0 |           0 |
+| 127 | KE_20200708200000 | What do you call an angle more than 90 degrees and less than 180 degrees?                         | 1           |      7 |           0 |         0 |       0 |           0 |
+| 128 | KE_20200708200000 | Which of the following is an Even number?                                                         | 2           |      8 |           0 |         0 |       0 |           0 |
+| 129 | KE_20200708200000 | Which of the following is an odd number?                                                          | 3           |      9 |           0 |         0 |       0 |           0 |
+| 130 | KE_20200708200000 | What is the place value of digit 7 in 4729                                                        | 1           |     10 |           0 |         0 |       0 |           0 |
++-----+-------------------+---------------------------------------------------------------------------------------------------+-------------+--------+-------------+-----------+---------+-------------+
