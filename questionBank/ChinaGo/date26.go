@@ -20,6 +20,8 @@ const (
 )
 //com 01
 //com 02
+//com 03
+//com 04
 
 func DOPrint() {
 	fmt.Printf("a = %d\nb =%d\nc =%d\nd = %d\ne = %d\n", a, b, c, d, e)
