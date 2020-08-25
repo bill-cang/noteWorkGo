@@ -16,6 +16,11 @@ func TestMd5SumStr(t *testing.T) {
 }
 
 func TestMd5SumRaw(t *testing.T) {
+	/*
+		"robot","pave","cloth",
+		"exist","vast","carpet",
+	*/
+
 	/*str := "hello world"
 	digest, err := Md5SumRaw(str)
 	if err != nil || len(digest) != 16 {

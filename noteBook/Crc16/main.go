@@ -14,6 +14,9 @@ func main() {
 	checksum := crc16.Checksum(data, crc16.IBMTable)
 
 	checksumIBM := crc16.ChecksumIBM(data)
+	bus := crc16.ChecksumMBus(data)
 
-	fmt.Println(checksum,"\n",checksumIBM)
+	ccitt := crc16.ChecksumCCITT(data)
+
+	fmt.Println(checksum, "\n", "\n", checksumIBM, bus, "\n", ccitt)
 }

@@ -4,8 +4,9 @@ import (
 	"errors"
 	"reflect"
 )
+
 //反射不能获取结构体的私有属性 ：reflect.Value.Interface: cannot return value obtained from unexported field or method
-func StructToMap(obj interface{}) (mmp map[string]interface{},err error)  {
+func StructToMap(obj interface{}) (mmp map[string]interface{}, err error) {
 	defer func() {
 		if e := recover(); e != nil {
 			err = errors.New(e.(string))
@@ -20,3 +21,4 @@ func StructToMap(obj interface{}) (mmp map[string]interface{},err error)  {
 	}
 	return
 }
+
