@@ -3,13 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	a := 'a'
-	for i := 1; i < 27; i++ {
-		fmt.Printf("%d %c ", a, a)
-		a++
-	}
+	fmt.Println(11011986%6)
 }
 
 
 
 //查看合并
+
+//在master修改，到dev提交
+
+
+//如果我再master分支已经有了两个分支共同的修改，使用 stash会怎样？
