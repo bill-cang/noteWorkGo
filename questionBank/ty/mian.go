@@ -8,12 +8,6 @@ func main() {
 
 
 
-//查看合并
-
-//在master修改，到dev提交
-
-
-//如果我再master分支已经有了两个分支共同的修改，使用 stash会怎样？
-
-
-//rebase 整理提交
+// rebase 01
+// rebase 02
+// rebase 03
