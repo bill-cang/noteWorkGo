@@ -1,9 +1,9 @@
 package pool
 
 import (
+	"fmt"
 	"sync"
 	"testing"
-	"fmt"
 )
 
 var wg sync.WaitGroup

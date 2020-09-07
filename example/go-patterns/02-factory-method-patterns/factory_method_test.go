@@ -7,22 +7,27 @@ import (
 )
 
 var (
-	k Kind = 1
-	m Kind = 2
-	n Kind = 3
 	balance float32 = 100.00
 )
 
 func TestGeneratePayment(t *testing.T) {
-	payment, _ := GeneratePayment(k, balance)
-	fmt.Println(reflect.TypeOf(payment).Elem().String())
-	if reflect.TypeOf(payment).Elem().String() != "factory.CashPay" {
-		t.Error("factory method generate error")
-	}
+	for i := 0; i < 4; i++ {
+		if payment, err := GeneratePayment(Kind(i), balance); err != nil {
+			fmt.Printf("GeneratePayment Kind =%d , err =%+v\n", i, err)
+			continue
+		} else {
+			fmt.Println(reflect.TypeOf(payment).Elem().String(), "paling....")
+			if err := payment.Pay(38.7); err != nil {
+				fmt.Printf("GeneratePayment Kind =%d , err =%+v\n", i, err)
+			}
 
-	payment, _ = GeneratePayment(n, balance)
-	if payment != nil {
-		t.Error("factory method params has error")
+			switch Kind(i) {
+			case Cash:
+				fmt.Printf("paly success. Balance =%f\n", payment.(*CashPay).Balance)
+			case Credit:
+				fmt.Printf("paly success. Balance =%f\n", payment.(*CashPay).Balance)
+			}
+		}
 	}
 }
 
@@ -35,4 +40,8 @@ func TestCashPay_Pay(t *testing.T) {
 	if cash.Balance != float32(80) {
 		t.Error("结算错误")
 	}
+}
+
+func TestGeneratePayment2(t *testing.T) {
+	fmt.Printf("Cash =%d,Credit =%d", Cash, Credit)
 }

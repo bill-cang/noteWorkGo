@@ -11,17 +11,17 @@ package builder
 type Wheel int
 //定义父struct
 type Vehicle struct {
-	Wheels	  Wheel
-	Seats 	  int
+	Wheels    Wheel
+	Seats     int
 	Structure string
 }
 
 //builder interface
 type Builder interface {
-	SetWheels()		Builder
-	SetSeats()		Builder
-	SetStructure()  Builder
-	GetVehicle()	Vehicle
+	SetWheels() Builder
+	SetSeats() Builder
+	SetStructure() Builder
+	GetVehicle() Vehicle
 }
 
 //Director

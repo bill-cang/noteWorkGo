@@ -24,7 +24,7 @@ func (con *Context) GetVal() string {
 /*创建ConcreteExpression*/
 //Equal表达式类
 type Equal struct {
-	left Context
+	left  Context
 	right Context
 }
 
@@ -34,7 +34,7 @@ func (e *Equal) Interpret() bool {
 
 //Contain表达式类
 type Contain struct {
-	left Context
+	left  Context
 	right Context
 }
 

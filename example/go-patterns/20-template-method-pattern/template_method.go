@@ -18,8 +18,8 @@ type Shape interface {
 
 //定义父类Person
 type Person struct {
-	name string
-	Concrete Shape  //具体子类的引用， 因为子类继承了接口
+	name     string
+	Concrete Shape //具体子类的引用， 因为子类继承了接口
 }
 
 func (p *Person) SetName(name string) {
