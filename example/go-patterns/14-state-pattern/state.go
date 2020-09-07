@@ -12,7 +12,7 @@ import "fmt"
 */
 //context对象，根据HealthValue的不同值设置不同状态
 type Context struct {
-	State 		ActionState
+	State       ActionState
 	HealthValue int
 }
 

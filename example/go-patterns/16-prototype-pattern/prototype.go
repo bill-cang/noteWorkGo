@@ -13,7 +13,7 @@ func (e *Example) Clone() *Example {
 	return &res
 }
 
-func New(des string) *Example{
+func New(des string) *Example {
 	return &Example{
 		Description: des,
 	}

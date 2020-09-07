@@ -1,9 +1,9 @@
 package strategy
 
 import (
+	"fmt"
 	"reflect"
 	"testing"
-	"fmt"
 )
 
 func TestAddition_Apply(t *testing.T) {

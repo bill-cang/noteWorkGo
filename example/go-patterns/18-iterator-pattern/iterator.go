@@ -65,7 +65,7 @@ func (a *Analysis) Visit() {
 //工厂方法创建迭代器
 func NewIterator() *Iterator {
 	return &Iterator{
-		index: 0,
+		index:     0,
 		Container: Container{},
 	}
 }
